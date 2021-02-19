@@ -34,26 +34,7 @@ public final class Main extends JavaPlugin {
 
         //dodawanie pluginow
         //getServer().getPluginManager().registerEvents(new nazwaKlasy(), this);
-        getServer().getPluginManager().registerEvents(new Navigator(1), this);
-        getServer().getPluginManager().registerEvents(new parkourRunEvent(), this);
-        getServer().getPluginManager().registerEvents(new tntRunEvent(this), this);
-        getServer().getPluginManager().registerEvents(new DuelNavi(1), this);
-        getServer().getPluginManager().registerEvents(new duelFightEvent(), this);
 
         //receptury
-        goldenAppleRec();
-
-
-    }
-
-    private void goldenAppleRec() {
-        ItemStack result = new ItemStack(Material.GOLDEN_APPLE);
-        NamespacedKey key = new NamespacedKey(this, "recipe1");
-        ShapedRecipe recipe = new ShapedRecipe(key, result);
-        recipe.shape(" G ", "GAG", " G ")
-                .setIngredient('G', Material.GOLD_INGOT)
-                .setIngredient('A', Material.APPLE);
-
-        Bukkit.addRecipe(recipe);
     }
 }
