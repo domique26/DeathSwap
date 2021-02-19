@@ -1,7 +1,8 @@
-name: mgPlugin
+name: deathSwap
 version: ${project.version}
 main: me.koziolek.Main
 api-version: 1.16
 commands:
   deathswap:
     descripion: death swap game
+    aliases: ["ds"]
