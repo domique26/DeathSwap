@@ -14,11 +14,10 @@ import java.util.List;
 
 public class DeathSwapCommand implements CommandExecutor {
 
+    Main plugin;
     boolean gameIsEnded = true;
-
     int r1;
 
-    Main plugin;
     public DeathSwapCommand(Main plugin) {
         this.plugin = plugin;
     }
@@ -45,6 +44,7 @@ public class DeathSwapCommand implements CommandExecutor {
         } else {
             players.add(p2);
             gameIsEnded = false;
+            Bukkit.broadcastMessage("THE GAME HAS STARTED!");
         }
 
         for (Player player:players) {
@@ -75,7 +75,7 @@ public class DeathSwapCommand implements CommandExecutor {
 
 
                 if(countdown == 60) {
-                    Bukkit.broadcastMessage("§cSwap in 60sec");
+                    Bukkit.broadcastMessage("§cSwap in 40sec");
                 }
                 if(countdown == 30) {
                     Bukkit.broadcastMessage("§cSwap in 30sec");
